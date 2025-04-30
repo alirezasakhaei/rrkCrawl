@@ -1,0 +1,338 @@
+[
+    {
+        "company_name": "دانش پويان هوش مصنوعي پارت",
+        "reg_number": "23151",
+        "nat_id_display": "14012318887",
+        "national_id": "4420591927",
+        "position": "ceo",
+        "context": "آقای احمد مکرمت یزدی به شماره ملی 4420591927 به سمت مدیرعامل به"
+    },
+    {
+        "company_name": "دانش پويان هوش مصنوعي پارت",
+        "reg_number": "23151",
+        "nat_id_display": "14012318887",
+        "national_id": "4430643441",
+        "position": "chairman",
+        "context": "آقای علی اکبر مکرمت یزدی به شماره ملی 4430643441 به سمت رئیس هیئت"
+    },
+    {
+        "company_name": "استحكام سازه يوز",
+        "reg_number": "11665",
+        "nat_id_display": "14012323342",
+        "national_id": "4220170601",
+        "position": "chairman",
+        "context": "آقای سید جمال الدین حسینی محمدآباد به شماره ملی 4220170601 به سمت رئیس هیئت"
+    },
+    {
+        "company_name": "استحكام سازه يوز",
+        "reg_number": "11665",
+        "nat_id_display": "14012323342",
+        "national_id": "4220192875",
+        "position": "ceo",
+        "context": "آقای رضا رستمی حسینخانی به شماره ملی 4220192875 به سمت مدیرعامل به"
+    },
+    {
+        "company_name": "استحكام سازه يوز",
+        "reg_number": "11665",
+        "nat_id_display": "14012323342",
+        "national_id": "4220326431",
+        "position": "unknown",
+        "context": "خانم رؤیا عباسیان چشمه چنار به شماره ملی 4220326431 به سمت نایب رئیس"
+    },
+    {
+        "company_name": "استحكام سازه يوز",
+        "reg_number": "11665",
+        "nat_id_display": "14012323342",
+        "national_id": "2432175255",
+        "position": "mainInspector",
+        "context": "خانم مهروش عرب حنائی به شماره ملی 2432175255 به سمت بازرس اصلی"
+    },
+    {
+        "company_name": "استحكام سازه يوز",
+        "reg_number": "11665",
+        "nat_id_display": "14012323342",
+        "national_id": "4220203826",
+        "position": "alternativeInspector",
+        "context": "آقای كاظم قلم فرسا به شماره ملی 4220203826 به سمت بازرس علی"
+    },
+    {
+        "company_name": "بازرگاني طرح نو محمد",
+        "reg_number": "7562",
+        "nat_id_display": "14013386479",
+        "national_id": "1990293107",
+        "position": "unknown",
+        "context": "آقای رضا بنوره به شماره ملی 1990293107 به سمت نایب رئیس"
+    },
+    {
+        "company_name": "بازرگاني طرح نو محمد",
+        "reg_number": "7562",
+        "nat_id_display": "14013386479",
+        "national_id": "1990887554",
+        "position": "boardmember",
+        "context": "آقای بهنام بنوره به شماره ملی 1990887554 به سمت عضو اصلی"
+    },
+    {
+        "company_name": "بازرگاني طرح نو محمد",
+        "reg_number": "7562",
+        "nat_id_display": "14013386479",
+        "national_id": "2000600921",
+        "position": "ceo",
+        "context": "آقای محمد بنوره به شماره ملی 2000600921 به سمت مدیرعامل به"
+    },
+    {
+        "company_name": "بازرگاني طرح نو محمد",
+        "reg_number": "7562",
+        "nat_id_display": "14013386479",
+        "national_id": "1754880932",
+        "position": "mainInspector",
+        "context": "خانم لیلا علینقی زاده به شماره ملی 1754880932 به سمت بازرس اصلی"
+    },
+    {
+        "company_name": "بازرگاني طرح نو محمد",
+        "reg_number": "7562",
+        "nat_id_display": "14013386479",
+        "national_id": "1990671251",
+        "position": "alternativeInspector",
+        "context": "آقای آرمان بنوره به شماره ملی 1990671251 به سمت بازرس علی"
+    },
+    {
+        "company_name": "مهندسان سازه هاي ماندگار آرين مهر هفتم",
+        "reg_number": "2900",
+        "nat_id_display": "14006846847",
+        "national_id": "0077911873",
+        "position": "chairman",
+        "context": "در تعهد سهامداران می باشد. اولین مدیران : مریم شاهین به شماره ملی 0077911873 به سمت رئیس هیئت"
+    },
+    {
+        "company_name": "مهندسان سازه هاي ماندگار آرين مهر هفتم",
+        "reg_number": "2900",
+        "nat_id_display": "14006846847",
+        "national_id": "2739185162",
+        "position": "chairman",
+        "context": "سمت رئیس هیئت مدیره و مدیرعامل و فاطمه حلوایی جلالی به شماره ملی 2739185162 به سمت نایب رئیس"
+    },
+    {
+        "company_name": "مهندسان سازه هاي ماندگار آرين مهر هفتم",
+        "reg_number": "2900",
+        "nat_id_display": "14006846847",
+        "national_id": "2739179881",
+        "position": "mainInspector",
+        "context": "طبق اساسنامه بازرس اصلی و علی البدل : محمدرضا فیروزمند به شماره ملی 2739179881 به سمت بازرس اصلی"
+    },
+    {
+        "company_name": "كارا زمين سهند",
+        "reg_number": "1893",
+        "nat_id_display": "14013583289",
+        "national_id": "6360001500",
+        "position": "chairman",
+        "context": "آقای اكبر عزیزی به شماره ملی 6360001500 به سمت رئیس هیئت"
+    },
+    {
+        "company_name": "كارا زمين سهند",
+        "reg_number": "1893",
+        "nat_id_display": "14013583289",
+        "national_id": "6369036870",
+        "position": "ceo",
+        "context": "آقای حسین عزیزی به شماره ملی 6369036870 به سمت مدیرعامل به"
+    },
+    {
+        "company_name": "فراز ستاره هرمزگان",
+        "reg_number": "24441",
+        "nat_id_display": "14013596043",
+        "national_id": "1818461269",
+        "position": "unknown",
+        "context": "خانم كبری صالحی به شماره ملی 1818461269 به سمت نایب رئیس"
+    },
+    {
+        "company_name": "فراز ستاره هرمزگان",
+        "reg_number": "24441",
+        "nat_id_display": "14013596043",
+        "national_id": "3380380441",
+        "position": "boardmember",
+        "context": "خانم نغمه كاملی به شماره ملی 3380380441 به سمت عضو اصلی"
+    },
+    {
+        "company_name": "فراز ستاره هرمزگان",
+        "reg_number": "24441",
+        "nat_id_display": "14013596043",
+        "national_id": "3381280015",
+        "position": "ceo",
+        "context": "خانم نازنین كاملی به شماره ملی 3381280015 به سمت مدیرعامل به"
+    },
+    {
+        "company_name": "فراز ستاره هرمزگان",
+        "reg_number": "24441",
+        "nat_id_display": "14013596043",
+        "national_id": "3381037641",
+        "position": "alternativeInspector",
+        "context": "آقای امیرحسین حمزه پور به شماره ملی 3381037641 به سمت بازرس علی"
+    },
+    {
+        "company_name": "فراز ستاره هرمزگان",
+        "reg_number": "24441",
+        "nat_id_display": "14013596043",
+        "national_id": "4699699197",
+        "position": "mainInspector",
+        "context": "آقای ناصر كاملی به شماره ملی 4699699197 به سمت بازرس اصلی"
+    },
+    {
+        "company_name": "آبادگران پاراك دشتگل",
+        "reg_number": "6493",
+        "nat_id_display": "14013569840",
+        "national_id": "1960386409",
+        "position": "chairman",
+        "context": "خانم رعنا حاجت پور به شماره ملی 1960386409 به سمت رئیس هیئت"
+    },
+    {
+        "company_name": "آبادگران پاراك دشتگل",
+        "reg_number": "6493",
+        "nat_id_display": "14013569840",
+        "national_id": "1960648942",
+        "position": "unknown",
+        "context": "آقای حسین طهماسبی بیرگانی به شماره ملی 1960648942 به سمت نایب رئیس"
+    },
+    {
+        "company_name": "آبادگران پاراك دشتگل",
+        "reg_number": "6493",
+        "nat_id_display": "14013569840",
+        "national_id": "5279947172",
+        "position": "boardmember",
+        "context": "آقای رضا حاجت پوربیرگانی به شماره ملی 5279947172 به سمت عضو اصلی"
+    },
+    {
+        "company_name": "آبادگران پاراك دشتگل",
+        "reg_number": "6493",
+        "nat_id_display": "14013569840",
+        "national_id": "1970527528",
+        "position": "alternativeInspector",
+        "context": "خانم كبری پرواسی به شماره ملی 1970527528 به سمت بازرس علی"
+    },
+    {
+        "company_name": "آبادگران پاراك دشتگل",
+        "reg_number": "6493",
+        "nat_id_display": "14013569840",
+        "national_id": "6639577976",
+        "position": "mainInspector",
+        "context": "خانم زهرا مهمدی كرتلائی به شماره ملی 6639577976 به سمت بازرس اصلی"
+    },
+    {
+        "company_name": "آتيه سازان صنعت رامهرمز",
+        "reg_number": "3448",
+        "nat_id_display": "14013599181",
+        "national_id": "1900250942",
+        "position": "boardmember",
+        "context": "آقای سعید بهزادی به شماره ملی 1900250942 به سمت عضو اصلی"
+    },
+    {
+        "company_name": "آتيه سازان صنعت رامهرمز",
+        "reg_number": "3448",
+        "nat_id_display": "14013599181",
+        "national_id": "1900322951",
+        "position": "chairman",
+        "context": "خانم فهیمه بهزادی به شماره ملی 1900322951 به سمت رئیس هیئت"
+    },
+    {
+        "company_name": "آتيه سازان صنعت رامهرمز",
+        "reg_number": "3448",
+        "nat_id_display": "14013599181",
+        "national_id": "1910747505",
+        "position": "unknown",
+        "context": "آقای محمدعلی بهزادی به شماره ملی 1910747505 به سمت نایب رئیس"
+    },
+    {
+        "company_name": "آتيه سازان صنعت رامهرمز",
+        "reg_number": "3448",
+        "nat_id_display": "14013599181",
+        "national_id": "1910802212",
+        "position": "mainInspector",
+        "context": "خانم كتایون پاینده به شماره ملی 1910802212 به سمت بازرس اصلی"
+    },
+    {
+        "company_name": "آتيه سازان صنعت رامهرمز",
+        "reg_number": "3448",
+        "nat_id_display": "14013599181",
+        "national_id": "6000066661",
+        "position": "alternativeInspector",
+        "context": "خانم مرضیه افسانه به شماره ملی 6000066661 به سمت بازرس علی"
+    },
+    {
+        "company_name": "ياقوت اعتماد سرخ",
+        "reg_number": "14921",
+        "nat_id_display": "14013634800",
+        "national_id": "4270008792",
+        "position": "boardmember",
+        "context": "خانم حمیرا بهلولی به شماره ملی 4270008792 به سمت عضو اصلی"
+    },
+    {
+        "company_name": "ياقوت اعتماد سرخ",
+        "reg_number": "14921",
+        "nat_id_display": "14013634800",
+        "national_id": "4285528691",
+        "position": "boardmember",
+        "context": "آقای حسین وثوق به شماره ملی 4285528691 به سمت عضو اصلی"
+    },
+    {
+        "company_name": "ياقوت اعتماد سرخ",
+        "reg_number": "14921",
+        "nat_id_display": "14013634800",
+        "national_id": "4285580438",
+        "position": "boardmember",
+        "context": "آقای رسول وثوق به شماره ملی 4285580438 به سمت عضو اصلی"
+    },
+    {
+        "company_name": "ياقوت اعتماد سرخ",
+        "reg_number": "14921",
+        "nat_id_display": "14013634800",
+        "national_id": "4270394544",
+        "position": "alternativeInspector",
+        "context": "خانم رعنا احدیان به شماره ملی 4270394544 به سمت بازرس علی"
+    },
+    {
+        "company_name": "ياقوت اعتماد سرخ",
+        "reg_number": "14921",
+        "nat_id_display": "14013634800",
+        "national_id": "4280540373",
+        "position": "mainInspector",
+        "context": "آقای رضا رضائی به شماره ملی 4280540373 به سمت بازرس اصلی"
+    },
+    {
+        "company_name": "قوام سازه ايساتيس",
+        "reg_number": "24362",
+        "nat_id_display": "14013623708",
+        "national_id": "3050791519",
+        "position": "unknown",
+        "context": "آقای محمد رضا زین الدینی راویز به شماره ملی 3050791519 به سمت نایب رئیس"
+    },
+    {
+        "company_name": "قوام سازه ايساتيس",
+        "reg_number": "24362",
+        "nat_id_display": "14013623708",
+        "national_id": "4420685077",
+        "position": "chairman",
+        "context": "آقای احسان ابوئی به شماره ملی 4420685077 به سمت رئیس هیئت"
+    },
+    {
+        "company_name": "قوام سازه ايساتيس",
+        "reg_number": "24362",
+        "nat_id_display": "14013623708",
+        "national_id": "4420695110",
+        "position": "ceo",
+        "context": "آقای مجید زردابی به شماره ملی 4420695110 به سمت مدیرعامل به"
+    },
+    {
+        "company_name": "قوام سازه ايساتيس",
+        "reg_number": "24362",
+        "nat_id_display": "14013623708",
+        "national_id": "1200172264",
+        "position": "mainInspector",
+        "context": "خانم نیلوفر عبدالی بارند به شماره ملی 1200172264 به سمت بازرس اصلی"
+    },
+    {
+        "company_name": "قوام سازه ايساتيس",
+        "reg_number": "24362",
+        "nat_id_display": "14013623708",
+        "national_id": "4421358754",
+        "position": "alternativeInspector",
+        "context": "آقای امیر ابویی شیطوری به شماره ملی 4421358754 به سمت بازرس علی"
+    }
+]
