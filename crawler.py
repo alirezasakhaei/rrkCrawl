@@ -1,7 +1,11 @@
 import time
 import json
 import re
+import os
+import argparse
+from tqdm import tqdm
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -42,10 +46,12 @@ def extract_all_phrase_contexts(text, phrase, start_words=["آقای", "خانم
             context_start_index = -1
             if best_start_word_index != -1:
                 context_start_index = best_start_word_index
-                print(f"    DEBUG: Found start word ('{cleaned_text[best_start_word_index:best_start_word_index+4]}...') before phrase.")
+                if verbose:
+                    print(f"    DEBUG: Found start word ('{cleaned_text[best_start_word_index:best_start_word_index+4]}...') before phrase.")
             else:
                 # Fallback: approximate start based on words if no start word found
-                print(f"    DEBUG: No start word found before phrase. Using fallback words: {fallback_words_before}")
+                if verbose:
+                    print(f"    DEBUG: No start word found before phrase. Using fallback words: {fallback_words_before}")
                 words_in_before_text = text_before_phrase.split()
                 fallback_start_word_num = max(0, len(words_in_before_text) - fallback_words_before)
                 # Try to find the start index of that word in the original cleaned text
@@ -71,7 +77,8 @@ def extract_all_phrase_contexts(text, phrase, start_words=["آقای", "خانم
             # Combine parts
             final_context = (context_part1 + " " + context_part2).strip()
             if final_context:
-                 print(f"    DEBUG: Combined context: '{final_context}'")
+                 if verbose:
+                     print(f"    DEBUG: Combined context: '{final_context}'")
                  contexts.append(final_context)
 
     except Exception as e:
@@ -79,11 +86,72 @@ def extract_all_phrase_contexts(text, phrase, start_words=["آقای", "خانم
 
     return contexts
 
+# Function to save data to file
+def save_data(data, filename="extracted_data.json", append=True):
+    existing_data = []
+    if append and os.path.exists(filename):
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                existing_data = json.load(f)
+            if verbose:
+                print(f"Loaded {len(existing_data)} existing entries from {filename}")
+        except Exception as e:
+            print(f"Error loading existing data: {e}. Will create new file.")
+    
+    combined_data = existing_data + data
+    
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(combined_data, f, ensure_ascii=False, indent=4)
+    
+    if verbose:
+        print(f"Saved {len(data)} new entries to {filename} (total: {len(combined_data)})")
+    
+    return combined_data
+
 # --- Main function ---
 def main():
+    global verbose
+    
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Web crawler for extracting national IDs.')
+    parser.add_argument('--verbose', action='store_true', help='Enable verbose output')
+    args = parser.parse_args()
+    
+    verbose = args.verbose
+    
+    # Get user inputs
+    search_term = input("Enter search term (e.g. نفت): ").strip()
+    max_samples = int(input("How many IDs do you want to extract? ").strip())
+    ceo_only = input("Only extract CEO positions? (y/n): ").strip().lower() == 'y'
+    
+    filename = "extracted_data.json"
+    
+    # Load existing data if available
+    existing_data = []
+    if os.path.exists(filename):
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                existing_data = json.load(f)
+            if verbose:
+                print(f"Loaded {len(existing_data)} existing entries from {filename}")
+        except Exception as e:
+            print(f"Error loading existing data: {e}")
+    
+    # Create set for tracking duplicates (company_name + national_id + position)
+    seen_entries = {f"{entry.get('company_name', '')}-{entry.get('national_id', '')}-{entry.get('position', '')}" 
+                   for entry in existing_data}
+    
     geckodriver_autoinstaller.install()
-    driver = webdriver.Firefox()
-    wait = WebDriverWait(driver, 35)
+    
+    # Set up Firefox options for headless mode
+    firefox_options = Options()
+    firefox_options.add_argument("--headless")
+    if verbose:
+        print("Starting Firefox in headless mode...")
+    driver = webdriver.Firefox(options=firefox_options)
+    
+    # Set timeout to 30 minutes (1800 seconds)
+    wait = WebDriverWait(driver, 1800)  
     original_window = driver.current_window_handle
     extracted_data = []
     search_phrase = "به شماره ملی"
@@ -111,41 +179,54 @@ def main():
     }
     position_keywords = list(position_map.keys()) # Order matters if checking sequentially
     sample_count = 0 # Counter for collected samples
-    auto_increment_id = 1 # ID for each sample
+    auto_increment_id = 1 if not existing_data else max(entry["id"] for entry in existing_data) + 1
     current_page_number = 1 # Track current page
-    max_samples = 1000 # Target number of samples
+    save_interval = 10  # Save data every 10 samples
+    last_save_count = 0
+    
+    # Setup progress bar
+    pbar = tqdm(total=max_samples, desc="Extracting National IDs")
+    
     # Define separate wait objects for potentially different timeouts
-    initial_wait = WebDriverWait(driver, 60) # Longer wait for initial search results
-    general_wait = WebDriverWait(driver, 35) # General wait for other actions
+    initial_wait = WebDriverWait(driver, 1800) # 30 minutes for initial search results
+    general_wait = WebDriverWait(driver, 1800) # 30 minutes for other actions
 
     try:
         # --- Initial Navigation and Search --- 
         target_url = "https://rrk.ir/ords/r/rrs/rrs-front/%D8%AF%D8%A7%D8%AF%D9%87-%D8%A8%D8%A7%D8%B2"
-        print(f"Opening {target_url}...")
+        if verbose:
+            print(f"Opening {target_url}...")
         driver.get(target_url)
-        print("Page opened. Waiting for elements...")
-        print("Waiting for input field P199_FOOTER...")
+        if verbose:
+            print("Page opened. Waiting for elements...")
+            print("Waiting for input field P199_FOOTER...")
         input_box = general_wait.until(EC.presence_of_element_located((By.ID, "P199_FOOTER")))
-        print("Sending keys to input field...")
-        input_box.send_keys("نفت")
-        print("Waiting for button B912476867105247978...")
+        if verbose:
+            print("Sending keys to input field...")
+        input_box.send_keys(search_term)
+        if verbose:
+            print("Waiting for button B912476867105247978...")
         search_button = general_wait.until(EC.element_to_be_clickable((By.ID, "B912476867105247978")))
-        print("Clicking button...")
+        if verbose:
+            print("Clicking button...")
         search_button.click()
         time.sleep(1) # Small pause after click
-        print("Search performed. Initial wait (up to 60s) for results table on page 1...")
+        if verbose:
+            print("Search performed. Initial wait (up to 30 minutes) for results table on page 1...")
         # Use the longer wait for the initial results
         initial_wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "tr a[href]")))
 
         # --- Pagination Loop --- 
         # Use general_wait for pagination and tab loading
         while sample_count < max_samples:
-            print(f"\n--- Processing Page: {current_page_number} (Samples collected: {sample_count}/{max_samples}) ---")
+            if verbose:
+                print(f"\n--- Processing Page: {current_page_number} (Samples collected: {sample_count}/{max_samples}) ---")
             # Ensure table rows are present/stable for the *current* page
             try:
                 general_wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "tr a[href]")))
                 time.sleep(1) 
-                print("Finding result links on current page...")
+                if verbose:
+                    print("Finding result links on current page...")
                 result_trs = driver.find_elements(By.TAG_NAME, "tr")
             except TimeoutException:
                 print(f"Timed out waiting for table rows on page {current_page_number}. Stopping.")
@@ -160,15 +241,18 @@ def main():
                         link_urls_to_process.append((index, link_url))
                 except NoSuchElementException:
                     pass
-            print(f"Found {len(link_urls_to_process)} links on page {current_page_number}.")
+            if verbose:
+                print(f"Found {len(link_urls_to_process)} links on page {current_page_number}.")
 
             # --- Process Links found on Current Page ---
             for link_index, link_url in link_urls_to_process:
                 if sample_count >= max_samples:
-                    print("Reached max samples limit. Stopping link processing.")
+                    if verbose:
+                        print("Reached max samples limit. Stopping link processing.")
                     break
 
-                print(f"  Processing link from row {link_index}: {link_url}")
+                if verbose:
+                    print(f"  Processing link from row {link_index}: {link_url}")
                 company_name = None # Initialize metadata vars
                 reg_number = None
                 nat_id_display = None
@@ -179,17 +263,21 @@ def main():
                     new_window = all_windows[-1]
                     driver.switch_to.window(new_window)
                     current_url = driver.current_url
-                    print(f"    Switched to new tab: {current_url}")
+                    if verbose:
+                        print(f"    Switched to new tab: {current_url}")
 
                     # Wait for body tag
                     body_locator = (By.TAG_NAME, "body")
-                    print("    Waiting for body tag to be present...")
+                    if verbose:
+                        print("    Waiting for body tag to be present...")
                     general_wait.until(EC.presence_of_element_located(body_locator))
-                    print("    Body tag found.")
+                    if verbose:
+                        print("    Body tag found.")
                     time.sleep(1) # Small delay
 
                     # Extract Metadata
-                    print("    Extracting metadata...")
+                    if verbose:
+                        print("    Extracting metadata...")
                     try:
                         company_input = driver.find_element(By.ID, "P28_COMPANYNAME")
                         company_name = company_input.get_attribute('value')
@@ -202,37 +290,60 @@ def main():
                         nat_id_display_element = driver.find_element(By.ID, "P28_SABTNATIONALID_DISPLAY")
                         nat_id_display = nat_id_display_element.text
                     except NoSuchElementException: pass
-                    print(f"      Metadata - Company: {company_name}, Reg: {reg_number}, NatID Disp: {nat_id_display}")
+                    
+                    if verbose:
+                        print(f"      Metadata - Company: {company_name}, Reg: {reg_number}, NatID Disp: {nat_id_display}")
 
                     # Get innerHTML from BODY, clean it
-                    print("    Re-finding body and getting innerHTML...")
+                    if verbose:
+                        print("    Re-finding body and getting innerHTML...")
                     body_element = driver.find_element(By.TAG_NAME, "body")
                     inner_html = body_element.get_attribute('innerHTML')
                     cleaned_text = remove_tags(inner_html)
 
                     # Extract contexts
-                    print(f"    Extracting all contexts for '{search_phrase}' starting from '{start_words_list}' ...")
+                    if verbose:
+                        print(f"    Extracting all contexts for '{search_phrase}' starting from '{start_words_list}' ...")
                     all_contexts = extract_all_phrase_contexts(cleaned_text, search_phrase, start_words=start_words_list, words_after=5)
 
                     # Filter, Validate, Extract Position, and Save
                     if all_contexts:
-                        print(f"      Found {len(all_contexts)} potential context(s). Validating...")
+                        if verbose:
+                            print(f"      Found {len(all_contexts)} potential context(s). Validating...")
                         for context in all_contexts:
-                            if sample_count >= max_samples: break # Check limit again
+                            if sample_count >= max_samples: 
+                                break # Check limit again
 
                             if filter_word not in context:
                                 continue # Skip if filter word missing
+                            
                             national_ids_found = re.findall(r'\b(\d{10})\b', context)
                             if len(national_ids_found) != 1:
                                 continue # Skip if not exactly one Nat ID
+                                
                             national_id = national_ids_found[0]
                             position = "unknown"
                             for keyword in position_keywords:
                                 if keyword in context:
                                     position = position_map[keyword]
                                     break
+                            
+                            # Skip if ceo_only is True and position is not CEO
+                            if ceo_only and position != "ceo":
+                                continue
+                                
+                            # Check for duplicates (same person, same position, same company)
+                            entry_key = f"{company_name}-{national_id}-{position}"
+                            if entry_key in seen_entries:
+                                if verbose:
+                                    print(f"        Skipping duplicate: {national_id} as {position} in {company_name}")
+                                continue
+                                
+                            seen_entries.add(entry_key)
 
-                            print(f"        Adding valid sample #{auto_increment_id}: NatID={national_id}, Pos={position}")
+                            if verbose:
+                                print(f"        Adding valid sample #{auto_increment_id}: NatID={national_id}, Pos={position}")
+                                
                             extracted_data.append({
                                 "id": auto_increment_id, # Add auto-increment ID
                                 "company_name": company_name,
@@ -244,18 +355,26 @@ def main():
                             })
                             sample_count += 1
                             auto_increment_id += 1
+                            
+                            # Update progress bar
+                            pbar.update(1)
+                            
+                            # Periodic save
+                            if sample_count - last_save_count >= save_interval:
+                                existing_data = save_data(extracted_data, filename, append=True)
+                                extracted_data = []  # Clear after saving
+                                last_save_count = sample_count
                     else:
-                        print("      No contexts containing the phrase found.")
+                        if verbose:
+                            print("      No contexts containing the phrase found.")
                 except TimeoutException:
                     print("    Timed out waiting for new tab content (body tag).")
                 except Exception as e:
                     print(f"    Error processing tab {link_url}: {e}")
                 finally:
                     if len(driver.window_handles) > 1:
-                        # print("    Closing tab...")
                         driver.close()
                         driver.switch_to.window(original_window)
-                        # print("    Switched back to original tab.")
                     else:
                         print("    Warning: Only one window handle found, cannot close tab.")
 
@@ -263,70 +382,85 @@ def main():
 
             # --- Try to Navigate to Next Page --- 
             if sample_count >= max_samples:
-                print(f"Reached max sample limit ({max_samples}). Stopping pagination.")
+                if verbose:
+                    print(f"Reached max sample limit ({max_samples}). Stopping pagination.")
                 break 
 
             next_page_number = current_page_number + 1
-            print(f"Attempting to navigate to page {next_page_number} using button class...")
+            if verbose:
+                print(f"Attempting to navigate to page {next_page_number} using button class...")
             found_next_page = False
             try:
                 # Direct approach: find all pagination buttons by class
-                print("  Looking for pagination buttons with class 'a-GV-pageButton'...")
+                if verbose:
+                    print("  Looking for pagination buttons with class 'a-GV-pageButton'...")
                 page_buttons = driver.find_elements(By.CSS_SELECTOR, "button.a-GV-pageButton")
-                print(f"  Found {len(page_buttons)} pagination buttons with class a-GV-pageButton.")
+                if verbose:
+                    print(f"  Found {len(page_buttons)} pagination buttons with class a-GV-pageButton.")
                 
                 # Debug: print all button texts
-                for i, btn in enumerate(page_buttons):
-                    try:
-                        btn_text = btn.text.strip()
-                        print(f"  DEBUG: Button {i}: text='{btn_text}'")
-                    except Exception as e:
-                        print(f"  DEBUG: Button {i}: Error getting text: {e}")
+                if verbose:
+                    for i, btn in enumerate(page_buttons):
+                        try:
+                            btn_text = btn.text.strip()
+                            print(f"  DEBUG: Button {i}: text='{btn_text}'")
+                        except Exception as e:
+                            print(f"  DEBUG: Button {i}: Error getting text: {e}")
                 
                 # Try to find and click the button for the next page
                 for btn in page_buttons:
                     try:
                         btn_text = btn.text.strip()
                         if btn_text == str(next_page_number):
-                            print(f"  Found button for page {next_page_number}. Clicking...")
+                            if verbose:
+                                print(f"  Found button for page {next_page_number}. Clicking...")
                             driver.execute_script("arguments[0].click();", btn)
                             time.sleep(3)  # Increased wait time after click
-                            print(f"  Waiting for page {next_page_number} content to load...")
+                            if verbose:
+                                print(f"  Waiting for page {next_page_number} content to load...")
                             general_wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "tr a[href]")))
-                            print(f"  Page {next_page_number} loaded successfully.")
+                            if verbose:
+                                print(f"  Page {next_page_number} loaded successfully.")
                             current_page_number = next_page_number
                             found_next_page = True
                             break
                     except Exception as btn_err:
-                        print(f"  Error clicking pagination button '{btn_text if 'btn_text' in locals() else 'unknown'}': {btn_err}")
+                        if verbose:
+                            print(f"  Error clicking pagination button '{btn_text if 'btn_text' in locals() else 'unknown'}': {btn_err}")
                         continue
                 
                 if not found_next_page:
-                    print(f"Could not find/click button for page {next_page_number}. Assuming end of results.")
+                    if verbose:
+                        print(f"Could not find/click button for page {next_page_number}. Assuming end of results.")
                     break
             except Exception as page_nav_err:
-                print(f"Error during pagination navigation: {page_nav_err}")
+                if verbose:
+                    print(f"Error during pagination navigation: {page_nav_err}")
                 break
 
         # --- End of Pagination Loop --- 
-
+        pbar.close()
+        
         print(f"\nFinished processing. Total samples collected: {sample_count}")
 
+        # Save any remaining data
         if extracted_data:
-            filename = "extracted_data.json"
-            print(f"Saving {len(extracted_data)} entries to {filename}...")
-            with open(filename, 'w', encoding='utf-8') as f:
-                json.dump(extracted_data, f, ensure_ascii=False, indent=4)
-            print("Data saved successfully.")
-        else:
-            print(f"No valid data (containing phrase '{search_phrase}', filter word '{filter_word}', and exactly one National ID) was extracted.")
+            save_data(extracted_data, filename, append=True)
 
     except TimeoutException:
         print("Timed out waiting for page elements (initial load or results might not have loaded or locators are incorrect).")
     except KeyboardInterrupt:
         print("\nOperation interrupted by user.")
+        # Save progress on interrupt
+        if extracted_data:
+            print("Saving current progress...")
+            save_data(extracted_data, filename, append=True)
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+        # Try to save data on error
+        if extracted_data:
+            print("Attempting to save progress before exit...")
+            save_data(extracted_data, filename, append=True)
     finally:
         print("Quitting WebDriver...")
         driver.quit()
