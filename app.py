@@ -205,17 +205,47 @@ def add_custom_css():
         }
     }
     
-    /* Sexy header styling */
+    /* Ultra premium header styling */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    
+    :root {
+        --primary-gradient: linear-gradient(135deg, #8A2387 0%, #E94057 50%, #F27121 100%);
+        --shadow-color: rgba(138, 35, 135, 0.25);
+        --text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        --glass-effect: rgba(255, 255, 255, 0.1);
+    }
+    
     .app-header {
-        background: linear-gradient(135deg, #ff3366 0%, #ff6b3d 100%);
+        background: var(--primary-gradient);
         color: white;
-        padding: 1.5rem;
-        border-radius: 12px;
-        margin-bottom: 2rem;
-        box-shadow: 0 4px 15px rgba(255, 51, 102, 0.15);
+        padding: 2.5rem 3rem;
+        border-radius: 16px;
+        margin: 1rem 0 3rem 0;
+        box-shadow: 
+            0 10px 30px var(--shadow-color),
+            0 -10px 30px var(--shadow-color),
+            inset 0 0 60px rgba(255, 255, 255, 0.1);
         text-align: center;
         position: relative;
         overflow: hidden;
+        animation: headerGlow 5s infinite alternate;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    
+    @keyframes headerGlow {
+        0% {
+            box-shadow: 
+                0 10px 30px var(--shadow-color),
+                0 -10px 30px var(--shadow-color),
+                inset 0 0 60px rgba(255, 255, 255, 0.1);
+        }
+        100% {
+            box-shadow: 
+                0 15px 40px var(--shadow-color),
+                0 -15px 40px var(--shadow-color),
+                inset 0 0 80px rgba(255, 255, 255, 0.2);
+        }
     }
     
     .app-header::before {
@@ -225,49 +255,121 @@ def add_custom_css():
         left: -50%;
         width: 200%;
         height: 200%;
-        background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
-        opacity: 0.4;
+        background: 
+            radial-gradient(
+                circle at 30% 30%, 
+                rgba(255, 255, 255, 0.4) 0%, 
+                rgba(255, 255, 255, 0) 60%
+            );
+        opacity: 0.6;
         z-index: 0;
+        animation: shimmer 8s infinite linear;
+        transform-origin: center;
+    }
+    
+    @keyframes shimmer {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
     }
     
     .app-header h1 {
         margin: 0;
-        font-size: 2.2rem;
+        font-size: 2.8rem;
+        font-weight: 700;
+        background: linear-gradient(to right, #ffffff, #f5f5f5);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
         position: relative;
-        z-index: 1;
-        font-weight: 600;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        z-index: 2;
+        text-shadow: var(--text-shadow);
+        letter-spacing: 1px;
+        animation: titleFade 5s infinite alternate;
+    }
+    
+    @keyframes titleFade {
+        0% { opacity: 0.9; transform: scale(0.99); }
+        100% { opacity: 1; transform: scale(1.01); }
     }
     
     .app-header p {
-        margin: 0.5rem 0 0 0;
-        font-size: 1.1rem;
+        margin: 1rem 0 0 0;
+        font-size: 1.3rem;
+        font-weight: 300;
         position: relative;
-        z-index: 1;
-        opacity: 0.9;
+        z-index: 2;
+        opacity: 0.95;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+        animation: subtitleSlide 1s ease-out;
     }
     
-    .app-icon {
-        font-size: 1.8rem;
-        margin-right: 0.5rem;
-        vertical-align: middle;
-        display: inline-block;
+    @keyframes subtitleSlide {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 0.95; }
     }
     
     .app-header-accent {
         position: absolute;
-        bottom: -30px;
-        right: -30px;
-        width: 120px;
-        height: 120px;
+        bottom: -60px;
+        right: -60px;
+        width: 180px;
+        height: 180px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.15);
-        z-index: 0;
+        background: var(--glass-effect);
+        z-index: 1;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        animation: float 8s infinite ease-in-out alternate;
     }
     
     .app-header-accent-2 {
         position: absolute;
+        top: -40px;
+        left: -40px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: var(--glass-effect);
+        z-index: 1;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        animation: float 8s infinite ease-in-out alternate-reverse;
+    }
+    
+    .app-header-accent-3 {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        z-index: 1;
+        animation: pulse 4s infinite ease-in-out;
+    }
+    
+    .app-header-accent-4 {
+        position: absolute;
+        bottom: 20%;
+        left: 15%;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.25);
+        z-index: 1;
+        animation: pulse 4s infinite 2s ease-in-out;
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(5deg); }
+        100% { transform: translateY(5px) rotate(-5deg); }
+    }
+    
+    @keyframes pulse {
         top: -20px;
         left: -20px;
         width: 80px;
@@ -275,6 +377,503 @@ def add_custom_css():
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.1);
         z-index: 0;
+    }
+    
+    /* Premium card styling */
+    .card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        box-shadow: 
+            0 10px 20px rgba(0, 0, 0, 0.08),
+            0 6px 6px rgba(0, 0, 0, 0.12);
+        padding: 1.8rem;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 70%);
+        transform: translateX(-100%);
+        transition: all 0.6s;
+    }
+    
+    .card:hover::after {
+        transform: translateX(100%);
+    }
+    
+    .card:hover {
+        box-shadow: 
+            0 14px 28px rgba(0, 0, 0, 0.1),
+            0 10px 10px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px) scale(1.01);
+    }
+    
+    .input-section {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        box-shadow: 
+            0 10px 20px rgba(0, 0, 0, 0.08),
+            0 6px 6px rgba(0, 0, 0, 0.12);
+        padding: 2rem;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        border: 1px solid rgba(240, 240, 240, 0.8);
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .input-section::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 60%);
+        opacity: 0.2;
+        z-index: 0;
+    }
+    
+    .section-title {
+        color: transparent;
+        background: var(--primary-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 0.7rem;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 40%;
+        height: 2px;
+        background: var(--primary-gradient);
+    }
+    
+    .param-title {
+        font-weight: 600;
+        margin-bottom: 8px !important;
+        font-size: 1rem;
+        color: #444;
+        position: relative;
+        padding-right: 0.8rem;
+    }
+    
+    .param-title::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 18px;
+        background: var(--primary-gradient);
+        border-radius: 4px;
+    }
+    
+    /* Enhanced button styling */
+    .stButton button {
+        background: var(--primary-gradient) !important;
+        color: white !important;
+        font-weight: bold !important;
+        border-radius: 10px !important;
+        padding: 0.6rem 1.5rem !important;
+        border: none !important;
+        transition: all 0.3s ease !important;
+        position: relative !important;
+        overflow: hidden !important;
+        box-shadow: 0 4px 15px rgba(233, 64, 87, 0.3) !important;
+    }
+    
+    .stButton button:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 7px 25px rgba(233, 64, 87, 0.45) !important;
+    }
+    
+    .stButton button::after {
+        content: "" !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 70%) !important;
+        transform: translateX(-100%) !important;
+    }
+    
+    .stButton button:hover::after {
+        animation: btn-shine 1.5s ease-out !important;
+    }
+    
+    @keyframes btn-shine {
+        100% {
+            transform: translateX(100%);
+        }
+    }
+    
+    /* Tabs styling */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 1px;
+        background: rgba(240, 240, 240, 0.3);
+        border-radius: 10px;
+        padding: 5px;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        border-radius: 10px;
+        padding: 10px 16px;
+        background: transparent;
+        color: #666;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+    
+    .stTabs [aria-selected="true"] {
+        background: white !important;
+        color: #E94057 !important;
+        font-weight: 600 !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    
+    /* Improved metrics styling */
+    .metrics-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    div[data-testid="metric-container"] {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+        padding: 1.5rem 1rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        transition: all 0.3s ease;
+    }
+    
+    div[data-testid="metric-container"]:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+    
+    div[data-testid="stMetricValue"] {
+        font-size: 2.2rem !important;
+        font-weight: 700 !important;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+    div[data-testid="stMetricLabel"] {
+        font-size: 1rem !important;
+        font-weight: 500 !important;
+        color: #555;
+    }
+    
+    /* Custom input fields */
+    input[type="text"], .stNumberInput input, select {
+        border-radius: 10px !important;
+        border: 1px solid rgba(0,0,0,0.1) !important;
+        padding: 0.6rem 1rem !important;
+        transition: all 0.3s ease !important;
+        box-shadow: inset 0 1px 3px rgba(0,0,0,0.05) !important;
+    }
+    
+    input[type="text"]:focus, .stNumberInput input:focus, select:focus {
+        border-color: #E94057 !important;
+        box-shadow: 0 0 0 2px rgba(233, 64, 87, 0.15) !important;
+    }
+    
+    /* Table/DataFrame styling */
+    .stDataFrame {
+        border-radius: 10px !important;
+        overflow: hidden !important;
+    }
+    
+    .stDataFrame [data-testid="StyledDataTable"] {
+        border-radius: 10px !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+    
+    .stDataFrame th {
+        background: var(--primary-gradient) !important;
+        color: white !important;
+        text-align: center !important;
+    }
+    
+    .stDataFrame tr:nth-child(even) {
+        background-color: rgba(240, 240, 240, 0.3) !important;
+    }
+    
+    .stDataFrame tr:hover {
+        background-color: rgba(233, 64, 87, 0.05) !important;
+    }
+    
+    /* Progress bar styling */
+    .stProgress > div > div > div > div {
+        background: var(--primary-gradient) !important;
+        border-radius: 10px !important;
+    }
+    
+    .stProgress {
+        height: 10px !important;
+        border-radius: 10px !important;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    /* Chart styling */
+    .js-plotly-plot {
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+        background: white !important;
+    }
+    
+    /* Main background with gradient and texture */
+    .main {
+        background-image: 
+            url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e94057' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+            linear-gradient(135deg, #f5f7fa 0%, #e4ebf5 100%);
+        background-attachment: fixed;
+    }
+    
+    .search-icon {
+        display: inline-block;
+        margin-right: 0.5rem;
+        font-size: 2.5rem;
+        background: linear-gradient(to bottom right, #FFD700, #FFA500);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 15px rgba(255, 216, 0, 0.5);
+        animation: iconGlow 3s infinite alternate;
+        vertical-align: middle;
+        transform: translateY(-2px);
+    }
+    
+    @keyframes iconGlow {
+        0% { text-shadow: 0 0 15px rgba(255, 216, 0, 0.5); }
+        100% { text-shadow: 0 0 25px rgba(255, 216, 0, 0.8); }
+    }
+    
+    /* Enhanced luxury elements */
+    .premium-divider {
+        height: 3px;
+        background: var(--primary-gradient);
+        border-radius: 3px;
+        margin: 2rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .premium-divider::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+        animation: shimmer-line 3s infinite linear;
+    }
+    
+    @keyframes shimmer-line {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
+    
+    /* Stunning 3D cards */
+    .metrics-container > div {
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+    
+    div[data-testid="metric-container"] {
+        transform: translateZ(0);
+        transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    
+    div[data-testid="metric-container"]:hover {
+        transform: translateY(-7px) translateZ(10px) rotateX(5deg);
+    }
+    
+    /* Elegant scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: rgba(240, 240, 240, 0.7);
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg, #E94057, #F27121);
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(45deg, #F27121, #E94057);
+    }
+    
+    /* Ultra premium switches and checkboxes */
+    .stCheckbox > div > div > div {
+        transform: scale(1.2);
+    }
+    
+    .stCheckbox > div > div > div[data-baseweb="checkbox"] > div {
+        background: var(--primary-gradient) !important;
+        border-color: transparent !important;
+    }
+    
+    .stSelectbox [data-baseweb="select"] > div {
+        border-radius: 10px !important;
+        transition: all 0.3s ease;
+    }
+    
+    .stSelectbox [data-baseweb="select"] > div:focus {
+        border-color: #E94057 !important;
+        box-shadow: 0 0 0 2px rgba(233, 64, 87, 0.15) !important;
+    }
+    
+    /* Super glossy section headers */
+    .sub-section-header {
+        font-size: 1.3rem;
+        color: white;
+        background: var(--primary-gradient);
+        padding: 0.7rem 1.5rem;
+        border-radius: 10px;
+        display: inline-block;
+        margin-bottom: 1rem;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(233, 64, 87, 0.2);
+        overflow: hidden;
+    }
+    
+    .sub-section-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg, 
+            rgba(255,255,255,0) 0%, 
+            rgba(255,255,255,0.1) 20%,
+            rgba(255,255,255,0.3) 50%, 
+            rgba(255,255,255,0.1) 80%,
+            rgba(255,255,255,0) 100%
+        );
+        transform: translateX(-100%);
+    }
+    
+    .sub-section-header:hover::before {
+        animation: sweep 1.5s forwards;
+    }
+    
+    @keyframes sweep {
+        100% { transform: translateX(100%); }
+    }
+    
+    /* Loading animations */
+    @keyframes pulse-opacity {
+        0% { opacity: 0.7; }
+        50% { opacity: 1; }
+        100% { opacity: 0.7; }
+    }
+    
+    .stSpinner > div {
+        animation: pulse-opacity 1.5s infinite !important;
+    }
+    
+    /* Make tooltips more premium */
+    [data-baseweb="tooltip"] {
+        background: var(--primary-gradient) !important;
+        color: white !important;
+        border-radius: 8px !important;
+        padding: 10px 14px !important;
+        font-weight: 500 !important;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1) !important;
+    }
+    
+    [data-baseweb="tooltip"]::after {
+        border-top-color: #E94057 !important;
+    }
+    
+    /* Text rotator for sub-headers */
+    .rotating-word {
+        display: inline-block;
+        animation: rotateText 10s infinite;
+    }
+    
+    @keyframes rotateText {
+        0%, 20% { opacity: 1; transform: translateY(0); }
+        25%, 45% { opacity: 0; transform: translateY(-20px); }
+        50%, 70% { opacity: 1; transform: translateY(0); }
+        75%, 95% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Page transitions */
+    @keyframes page-fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .stApp {
+        animation: page-fade-in 0.6s ease-out forwards;
+    }
+    
+    /* Override card styling to remove visual separation */
+    .card {
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        margin-bottom: 2rem !important;
+        padding: 0 !important;
+    }
+    
+    .card::after {
+        display: none !important;
+    }
+    
+    .card:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* Make section headers more distinctive */
+    .card h3 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+        color: #8A2387 !important;
+        padding-bottom: 0.5rem !important;
+        border-bottom: 2px solid rgba(138, 35, 135, 0.2) !important;
+        display: inline-block !important;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -454,9 +1053,16 @@ st.markdown("""
 <div class="app-header">
     <div class="app-header-accent"></div>
     <div class="app-header-accent-2"></div>
-    <h1>استخراج هوشمند داده از روزنامه رسمی🔍</h1>
+    <div class="app-header-accent-3"></div>
+    <div class="app-header-accent-4"></div>
+    <h1><span class="search-icon">🔍</span> استخراج هوشمند داده از روزنامه رسمی</h1>
     <p>سیستم پیشرفته استخراج و تحلیل اطلاعات شرکت‌ها و مدیران</p>
 </div>
+""", unsafe_allow_html=True)
+
+# Add premium divider after header
+st.markdown("""
+<div class="premium-divider"></div>
 """, unsafe_allow_html=True)
 
 # Tab navigation
@@ -474,7 +1080,6 @@ with tab1:
     st.markdown("""
     <div style="text-align: center; margin-bottom: 25px;">
         <h2 style="color: #333; font-size: 1.8rem;">📰 استخراج داده از روزنامه رسمی کشور</h2>
-        <p style="color: #666; font-size: 1rem;">استخراج هوشمند اطلاعات شرکت‌ها و مدیران آن‌ها</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -485,23 +1090,18 @@ with tab1:
     # Single column layout for all search parameters
     st.markdown('<p class="param-title">عبارت کلیدی برای جستجو</p>', unsafe_allow_html=True)
     search_term = st.text_input("", value="نفت", help="مثال: نفت، پتروشیمی، فولاد و غیره", label_visibility="collapsed")
-    st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown('<p class="param-title">فیلتر نتایج</p>', unsafe_allow_html=True)
     ceo_only = st.checkbox("👔 فقط مدیران عامل", value=False, help="در صورت انتخاب، فقط اطلاعات مدیران عامل استخراج می‌شود")
-    st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown('<p class="param-title">تنظیمات حجم داده</p>', unsafe_allow_html=True)
     max_samples = st.number_input("تعداد نمونه مورد نیاز", min_value=1, max_value=10000, value=100, help="حداکثر تعداد داده‌هایی که می‌خواهید استخراج کنید", label_visibility="collapsed")
-    st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown('<p class="param-title">زمان انتظار (دقیقه)</p>', unsafe_allow_html=True)
     timeout_mins = st.number_input("timeout", min_value=1, max_value=60, value=30, help="حداکثر زمان انتظار برای بارگذاری صفحات (دقیقه)", label_visibility="collapsed", key="timeout_input")
-    st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown('<p class="param-title">نام فایل خروجی</p>', unsafe_allow_html=True)
     output_filename = st.text_input("filename", value="extracted_data.json", help="نام فایل برای ذخیره نتایج", label_visibility="collapsed", key="output_filename_input")
-    st.markdown('</div>', unsafe_allow_html=True)
     
     # Improve button placement - make it inside the input section
     st.markdown('<div class="submit-btn">', unsafe_allow_html=True)
@@ -919,32 +1519,107 @@ with tab1:
             # Export options
             col1, col2, col3 = st.columns(3)
             
-            with col1:
-                # CSV Download
-                csv = df.to_csv(index=False)
-                b64 = base64.b64encode(csv.encode()).decode()
-                href = f'<a href="data:file/csv;base64,{b64}" download="extracted_data.csv" class="stButton"><button>دانلود CSV</button></a>'
-                st.markdown(href, unsafe_allow_html=True)
-            
-            with col2:
-                # Excel Download
-                buffer = pd.ExcelWriter('extracted_data.xlsx', engine='xlsxwriter')
-                df.to_excel(buffer, index=False, sheet_name='Sheet1')
-                buffer.close()
+            # First, load all data from file and combine with session data
+            try:
+                all_data = []
+                if os.path.exists(output_filename):
+                    with open(output_filename, 'r', encoding='utf-8') as f:
+                        all_data = json.load(f)
                 
-                with open('extracted_data.xlsx', 'rb') as f:
-                    excel_data = f.read()
+                # Add any new session data that might not be in the file yet
+                session_data_ids = {item["id"] for item in st.session_state.data}
+                all_data = [item for item in all_data if item["id"] not in session_data_ids] + st.session_state.data
                 
-                b64 = base64.b64encode(excel_data).decode()
-                href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="extracted_data.xlsx" class="stButton"><button>دانلود Excel</button></a>'
-                st.markdown(href, unsafe_allow_html=True)
-            
-            with col3:
-                # JSON Download
-                json_str = json.dumps(st.session_state.data, ensure_ascii=False, indent=4, cls=DateTimeEncoder)
-                b64 = base64.b64encode(json_str.encode('utf-8')).decode()
-                href = f'<a href="data:file/json;base64,{b64}" download="extracted_data.json" class="stButton"><button>دانلود JSON</button></a>'
-                st.markdown(href, unsafe_allow_html=True)
+                # Convert to DataFrame for display
+                position_display = {
+                    "chairman": "رئیس هیئت مدیره",
+                    "viceChairman": "نایب رئیس هیئت مدیره", 
+                    "ceo": "مدیرعامل",
+                    "boardmember": "عضو هیئت مدیره",
+                    "boardmember_alternate": "عضو علی البدل",
+                    "mainInspector": "بازرس اصلی",
+                    "alternativeInspector": "بازرس علی البدل",
+                    "unknown": "نامشخص"
+                }
+                
+                # Create display data from combined data
+                all_display_data = []
+                for item in all_data:
+                    all_display_data.append({
+                        "شناسه": item.get("id"),
+                        "نام شرکت": item.get("company_name", "نامشخص"),
+                        "شماره ثبت": item.get("reg_number", "نامشخص"),
+                        "شناسه ملی": item.get("national_id", ""),
+                        "سمت": position_display.get(item.get("position"), item.get("position", "نامشخص")),
+                        "تاریخ استخراج": item.get("extraction_date", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+                    })
+                
+                all_df = pd.DataFrame(all_display_data)
+                
+                with col1:
+                    # CSV Download with all data
+                    csv = all_df.to_csv(index=False)
+                    b64 = base64.b64encode(csv.encode()).decode()
+                    href = f'<a href="data:file/csv;base64,{b64}" download="extracted_data.csv" class="stButton"><button>دانلود CSV</button></a>'
+                    st.markdown(href, unsafe_allow_html=True)
+                
+                with col2:
+                    # Excel Download with all data
+                    buffer = pd.ExcelWriter('extracted_data.xlsx', engine='xlsxwriter')
+                    all_df.to_excel(buffer, index=False, sheet_name='Sheet1')
+                    buffer.close()
+                    
+                    with open('extracted_data.xlsx', 'rb') as f:
+                        excel_data = f.read()
+                    
+                    b64 = base64.b64encode(excel_data).decode()
+                    href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="extracted_data.xlsx" class="stButton"><button>دانلود Excel</button></a>'
+                    st.markdown(href, unsafe_allow_html=True)
+                
+                with col3:
+                    # JSON Download with all data
+                    json_str = json.dumps(all_data, ensure_ascii=False, indent=4, cls=DateTimeEncoder)
+                    b64 = base64.b64encode(json_str.encode('utf-8')).decode()
+                    href = f'<a href="data:file/json;base64,{b64}" download="extracted_data.json" class="stButton"><button>دانلود JSON</button></a>'
+                    st.markdown(href, unsafe_allow_html=True)
+                    
+                # Show total data count
+                st.info(f"تعداد کل داده‌ها: {len(all_data)} (تعداد در جلسه فعلی: {len(st.session_state.data)})")
+                    
+            except Exception as e:
+                st.error(f"خطا در بارگیری یا دانلود داده‌ها: {str(e)}")
+                # Fallback to session data only
+                with col1:
+                    # CSV Download - fallback to session data only
+                    csv = df.to_csv(index=False)
+                    b64 = base64.b64encode(csv.encode()).decode()
+                    href = f'<a href="data:file/csv;base64,{b64}" download="extracted_data.csv" class="stButton"><button>دانلود CSV</button></a>'
+                    st.markdown(href, unsafe_allow_html=True)
+                
+                with col2:
+                    # Excel Download - fallback to session data only
+                    buffer = pd.ExcelWriter('extracted_data.xlsx', engine='xlsxwriter')
+                    df.to_excel(buffer, index=False, sheet_name='Sheet1')
+                    buffer.close()
+                    
+                    with open('extracted_data.xlsx', 'rb') as f:
+                        excel_data = f.read()
+                    
+                    b64 = base64.b64encode(excel_data).decode()
+                    href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="extracted_data.xlsx" class="stButton"><button>دانلود Excel</button></a>'
+                    st.markdown(href, unsafe_allow_html=True)
+                
+                with col3:
+                    # JSON Download - fallback to session data only
+                    json_str = json.dumps(st.session_state.data, ensure_ascii=False, indent=4, cls=DateTimeEncoder)
+                    b64 = base64.b64encode(json_str.encode('utf-8')).decode()
+                    href = f'<a href="data:file/json;base64,{b64}" download="extracted_data.json" class="stButton"><button>دانلود JSON</button></a>'
+                    st.markdown(href, unsafe_allow_html=True)
+                
+                st.warning("توجه: فقط داده‌های جلسه فعلی قابل دانلود هستند.")
+    else:
+        st.warning(f"فایل داده ({output_filename}) یافت نشد. لطفاً ابتدا با استفاده از تب 'روزنامه رسمی' داده‌ها را استخراج کنید.")
+        st.info("راهنما: به تب 'روزنامه رسمی' بروید، اطلاعات مورد نیاز را وارد کرده و دکمه 'شروع استخراج داده‌ها' را بزنید.")
 
 with tab2:
     colored_header(
@@ -1334,3 +2009,5 @@ with tab3:
 # Footer
 st.markdown("---")
 st.markdown("<p style='text-align: center;'>© 2025 Persian Data Crawler | طراحی و توسعه با ❤️</p>", unsafe_allow_html=True) 
+
+# End of file

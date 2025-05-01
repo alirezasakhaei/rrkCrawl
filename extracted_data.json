@@ -198,5 +198,115 @@
         "position": "ceo",
         "context": "خانم پریوش طلاوری به شماره ملی 1910151165 به سمت مدیرعامل به",
         "extraction_date": "2025-05-01 11:01:09"
+    },
+    {
+        "id": 21,
+        "company_name": "بازرگاني طرح نو محمد",
+        "reg_number": "7562",
+        "nat_id_display": "14013386479",
+        "national_id": "1754880932",
+        "position": "mainInspector",
+        "context": "خانم لیلا علینقی زاده به شماره ملی 1754880932 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-01 11:21:56"
+    },
+    {
+        "id": 22,
+        "company_name": "بازرگاني طرح نو محمد",
+        "reg_number": "7562",
+        "nat_id_display": "14013386479",
+        "national_id": "1990671251",
+        "position": "alternativeInspector",
+        "context": "آقای آرمان بنوره به شماره ملی 1990671251 به سمت بازرس علی",
+        "extraction_date": "2025-05-01 11:21:56"
+    },
+    {
+        "id": 23,
+        "company_name": "مهندسان سازه هاي ماندگار آرين مهر هفتم",
+        "reg_number": "2900",
+        "nat_id_display": "14006846847",
+        "national_id": "0077911873",
+        "position": "chairman",
+        "context": "در تعهد سهامداران می باشد. اولین مدیران : مریم شاهین به شماره ملی 0077911873 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-01 11:21:57"
+    },
+    {
+        "id": 24,
+        "company_name": "مهندسان سازه هاي ماندگار آرين مهر هفتم",
+        "reg_number": "2900",
+        "nat_id_display": "14006846847",
+        "national_id": "2739185162",
+        "position": "chairman",
+        "context": "سمت رئیس هیئت مدیره و مدیرعامل و فاطمه حلوایی جلالی به شماره ملی 2739185162 به سمت نایب رئیس",
+        "extraction_date": "2025-05-01 11:21:57"
+    },
+    {
+        "id": 25,
+        "company_name": "مهندسان سازه هاي ماندگار آرين مهر هفتم",
+        "reg_number": "2900",
+        "nat_id_display": "14006846847",
+        "national_id": "2739179881",
+        "position": "mainInspector",
+        "context": "طبق اساسنامه بازرس اصلی و علی البدل : محمدرضا فیروزمند به شماره ملی 2739179881 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-01 11:21:57"
+    },
+    {
+        "id": 26,
+        "company_name": "كارا زمين سهند",
+        "reg_number": "1893",
+        "nat_id_display": "14013583289",
+        "national_id": "6360001500",
+        "position": "chairman",
+        "context": "آقای اكبر عزیزی به شماره ملی 6360001500 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-01 11:26:29"
+    },
+    {
+        "id": 27,
+        "company_name": "فراز ستاره هرمزگان",
+        "reg_number": "24441",
+        "nat_id_display": "14013596043",
+        "national_id": "1818461269",
+        "position": "viceChairman",
+        "context": "خانم كبری صالحی به شماره ملی 1818461269 به سمت نایب رئیس",
+        "extraction_date": "2025-05-01 11:26:30"
+    },
+    {
+        "id": 28,
+        "company_name": "فراز ستاره هرمزگان",
+        "reg_number": "24441",
+        "nat_id_display": "14013596043",
+        "national_id": "3380380441",
+        "position": "boardmember",
+        "context": "خانم نغمه كاملی به شماره ملی 3380380441 به سمت عضو اصلی",
+        "extraction_date": "2025-05-01 11:26:30"
+    },
+    {
+        "id": 29,
+        "company_name": "فراز ستاره هرمزگان",
+        "reg_number": "24441",
+        "nat_id_display": "14013596043",
+        "national_id": "3381037641",
+        "position": "alternativeInspector",
+        "context": "آقای امیرحسین حمزه پور به شماره ملی 3381037641 به سمت بازرس علی",
+        "extraction_date": "2025-05-01 11:26:30"
+    },
+    {
+        "id": 30,
+        "company_name": "فراز ستاره هرمزگان",
+        "reg_number": "24441",
+        "nat_id_display": "14013596043",
+        "national_id": "4699699197",
+        "position": "mainInspector",
+        "context": "آقای ناصر كاملی به شماره ملی 4699699197 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-01 11:26:30"
+    },
+    {
+        "id": 31,
+        "company_name": "آبادگران پاراك دشتگل",
+        "reg_number": "6493",
+        "nat_id_display": "14013569840",
+        "national_id": "1960386409",
+        "position": "chairman",
+        "context": "خانم رعنا حاجت پور به شماره ملی 1960386409 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-01 11:28:21"
     }
 ]
