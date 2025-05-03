@@ -308,5 +308,1055 @@
         "position": "chairman",
         "context": "خانم رعنا حاجت پور به شماره ملی 1960386409 به سمت رئیس هیئت",
         "extraction_date": "2025-05-01 11:28:21"
+    },
+    {
+        "id": 32,
+        "company_name": "آبادگران پاراك دشتگل",
+        "reg_number": "6493",
+        "nat_id_display": "14013569840",
+        "national_id": "1960648942",
+        "position": "viceChairman",
+        "context": "آقای حسین طهماسبی بیرگانی به شماره ملی 1960648942 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:12:19"
+    },
+    {
+        "id": 33,
+        "company_name": "آبادگران پاراك دشتگل",
+        "reg_number": "6493",
+        "nat_id_display": "14013569840",
+        "national_id": "5279947172",
+        "position": "boardmember",
+        "context": "آقای رضا حاجت پوربیرگانی به شماره ملی 5279947172 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:12:19"
+    },
+    {
+        "id": 34,
+        "company_name": "آبادگران پاراك دشتگل",
+        "reg_number": "6493",
+        "nat_id_display": "14013569840",
+        "national_id": "1970527528",
+        "position": "alternativeInspector",
+        "context": "خانم كبری پرواسی به شماره ملی 1970527528 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:12:19"
+    },
+    {
+        "id": 35,
+        "company_name": "آبادگران پاراك دشتگل",
+        "reg_number": "6493",
+        "nat_id_display": "14013569840",
+        "national_id": "6639577976",
+        "position": "mainInspector",
+        "context": "خانم زهرا مهمدی كرتلائی به شماره ملی 6639577976 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:12:19"
+    },
+    {
+        "id": 36,
+        "company_name": "آتيه سازان صنعت رامهرمز",
+        "reg_number": "3448",
+        "nat_id_display": "14013599181",
+        "national_id": "1900250942",
+        "position": "boardmember",
+        "context": "آقای سعید بهزادی به شماره ملی 1900250942 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:12:21"
+    },
+    {
+        "id": 37,
+        "company_name": "آتيه سازان صنعت رامهرمز",
+        "reg_number": "3448",
+        "nat_id_display": "14013599181",
+        "national_id": "1900322951",
+        "position": "chairman",
+        "context": "خانم فهیمه بهزادی به شماره ملی 1900322951 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:00"
+    },
+    {
+        "id": 38,
+        "company_name": "آتيه سازان صنعت رامهرمز",
+        "reg_number": "3448",
+        "nat_id_display": "14013599181",
+        "national_id": "1910747505",
+        "position": "viceChairman",
+        "context": "آقای محمدعلی بهزادی به شماره ملی 1910747505 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:00"
+    },
+    {
+        "id": 39,
+        "company_name": "آتيه سازان صنعت رامهرمز",
+        "reg_number": "3448",
+        "nat_id_display": "14013599181",
+        "national_id": "1910802212",
+        "position": "mainInspector",
+        "context": "خانم كتایون پاینده به شماره ملی 1910802212 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:00"
+    },
+    {
+        "id": 40,
+        "company_name": "آتيه سازان صنعت رامهرمز",
+        "reg_number": "3448",
+        "nat_id_display": "14013599181",
+        "national_id": "6000066661",
+        "position": "alternativeInspector",
+        "context": "خانم مرضیه افسانه به شماره ملی 6000066661 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:00"
+    },
+    {
+        "id": 41,
+        "company_name": "قوام سازه ايساتيس",
+        "reg_number": "24362",
+        "nat_id_display": "14013623708",
+        "national_id": "3050791519",
+        "position": "viceChairman",
+        "context": "آقای محمد رضا زین الدینی راویز به شماره ملی 3050791519 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:02"
+    },
+    {
+        "id": 42,
+        "company_name": "قوام سازه ايساتيس",
+        "reg_number": "24362",
+        "nat_id_display": "14013623708",
+        "national_id": "4420685077",
+        "position": "chairman",
+        "context": "آقای احسان ابوئی به شماره ملی 4420685077 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:02"
+    },
+    {
+        "id": 43,
+        "company_name": "قوام سازه ايساتيس",
+        "reg_number": "24362",
+        "nat_id_display": "14013623708",
+        "national_id": "1200172264",
+        "position": "mainInspector",
+        "context": "خانم نیلوفر عبدالی بارند به شماره ملی 1200172264 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:02"
+    },
+    {
+        "id": 44,
+        "company_name": "قوام سازه ايساتيس",
+        "reg_number": "24362",
+        "nat_id_display": "14013623708",
+        "national_id": "4421358754",
+        "position": "alternativeInspector",
+        "context": "آقای امیر ابویی شیطوری به شماره ملی 4421358754 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:02"
+    },
+    {
+        "id": 45,
+        "company_name": "ياقوت اعتماد سرخ",
+        "reg_number": "14921",
+        "nat_id_display": "14013634800",
+        "national_id": "4270008792",
+        "position": "boardmember",
+        "context": "خانم حمیرا بهلولی به شماره ملی 4270008792 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:04"
+    },
+    {
+        "id": 46,
+        "company_name": "ياقوت اعتماد سرخ",
+        "reg_number": "14921",
+        "nat_id_display": "14013634800",
+        "national_id": "4285528691",
+        "position": "boardmember",
+        "context": "آقای حسین وثوق به شماره ملی 4285528691 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:04"
+    },
+    {
+        "id": 47,
+        "company_name": "ياقوت اعتماد سرخ",
+        "reg_number": "14921",
+        "nat_id_display": "14013634800",
+        "national_id": "4285580438",
+        "position": "boardmember",
+        "context": "آقای رسول وثوق به شماره ملی 4285580438 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:04"
+    },
+    {
+        "id": 48,
+        "company_name": "ياقوت اعتماد سرخ",
+        "reg_number": "14921",
+        "nat_id_display": "14013634800",
+        "national_id": "4270394544",
+        "position": "alternativeInspector",
+        "context": "خانم رعنا احدیان به شماره ملی 4270394544 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:04"
+    },
+    {
+        "id": 49,
+        "company_name": "ياقوت اعتماد سرخ",
+        "reg_number": "14921",
+        "nat_id_display": "14013634800",
+        "national_id": "4280540373",
+        "position": "mainInspector",
+        "context": "آقای رضا رضائی به شماره ملی 4280540373 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:04"
+    },
+    {
+        "id": 50,
+        "company_name": "قره قوم شبستر",
+        "reg_number": "1900",
+        "nat_id_display": "14013641456",
+        "national_id": "1581489536",
+        "position": "boardmember",
+        "context": "آقای عیوض شایان به شماره ملی 1581489536 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:10"
+    },
+    {
+        "id": 51,
+        "company_name": "قره قوم شبستر",
+        "reg_number": "1900",
+        "nat_id_display": "14013641456",
+        "national_id": "1581491387",
+        "position": "boardmember",
+        "context": "خانم زهرا بورجلو به شماره ملی 1581491387 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:10"
+    },
+    {
+        "id": 52,
+        "company_name": "قره قوم شبستر",
+        "reg_number": "1900",
+        "nat_id_display": "14013641456",
+        "national_id": "1583443101",
+        "position": "boardmember",
+        "context": "آقای محمود شایان به شماره ملی 1583443101 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:10"
+    },
+    {
+        "id": 53,
+        "company_name": "قره قوم شبستر",
+        "reg_number": "1900",
+        "nat_id_display": "14013641456",
+        "national_id": "5199872087",
+        "position": "boardmember",
+        "context": "آقای كرامت صادقی آذربره كتانلو به شماره ملی 5199872087 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:10"
+    },
+    {
+        "id": 54,
+        "company_name": "قره قوم شبستر",
+        "reg_number": "1900",
+        "nat_id_display": "14013641456",
+        "national_id": "1380989353",
+        "position": "alternativeInspector",
+        "context": "آقای بلال جسمی سهلان به شماره ملی 1380989353 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:10"
+    },
+    {
+        "id": 55,
+        "company_name": "قره قوم شبستر",
+        "reg_number": "1900",
+        "nat_id_display": "14013641456",
+        "national_id": "1570341834",
+        "position": "mainInspector",
+        "context": "خانم مریم عباسی به شماره ملی 1570341834 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:10"
+    },
+    {
+        "id": 56,
+        "company_name": "مهرگان رهپويان تجارت قرن",
+        "reg_number": "636014",
+        "nat_id_display": "14013627564",
+        "national_id": "0451652193",
+        "position": "boardmember",
+        "context": "خانم زهرا ظهیری به شماره ملی 0451652193 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:11"
+    },
+    {
+        "id": 57,
+        "company_name": "فراز مبتكران شيمي",
+        "reg_number": "636016",
+        "nat_id_display": "14013627657",
+        "national_id": "0081332440",
+        "position": "chairman",
+        "context": "آقای سیدحمید رجائی رامشه به شماره ملی 0081332440 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:14"
+    },
+    {
+        "id": 58,
+        "company_name": "زرين اطلس جم",
+        "reg_number": "993",
+        "nat_id_display": "14013634820",
+        "national_id": "6090057843",
+        "position": "viceChairman",
+        "context": "آقای ابراهیم تهمتن به شماره ملی 6090057843 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:16"
+    },
+    {
+        "id": 59,
+        "company_name": "زرين اطلس جم",
+        "reg_number": "993",
+        "nat_id_display": "14013634820",
+        "national_id": "6090086983",
+        "position": "chairman",
+        "context": "آقای سهراب تهمتن به شماره ملی 6090086983 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:16"
+    },
+    {
+        "id": 60,
+        "company_name": "زرين اطلس جم",
+        "reg_number": "993",
+        "nat_id_display": "14013634820",
+        "national_id": "6090045179",
+        "position": "alternativeInspector",
+        "context": "آقای محمد جواد خمیسی به شماره ملی 6090045179 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:16"
+    },
+    {
+        "id": 61,
+        "company_name": "زرين اطلس جم",
+        "reg_number": "993",
+        "nat_id_display": "14013634820",
+        "national_id": "6090072788",
+        "position": "mainInspector",
+        "context": "آقای سید سجاد خلیلی به شماره ملی 6090072788 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:16"
+    },
+    {
+        "id": 62,
+        "company_name": "تجارت بين المللي آوات",
+        "reg_number": "635820",
+        "nat_id_display": "14013614723",
+        "national_id": "0790385597",
+        "position": "chairman",
+        "context": "آقای سیدعبداله حجازیان به شماره ملی 0790385597 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:17"
+    },
+    {
+        "id": 63,
+        "company_name": "تجارت بين المللي آوات",
+        "reg_number": "635820",
+        "nat_id_display": "14013614723",
+        "national_id": "0792301544",
+        "position": "boardmember",
+        "context": "آقای سیدحسن حجازیان به شماره ملی 0792301544 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:17"
+    },
+    {
+        "id": 64,
+        "company_name": "تجارت بين المللي آوات",
+        "reg_number": "635820",
+        "nat_id_display": "14013614723",
+        "national_id": "0062973584",
+        "position": "mainInspector",
+        "context": "آقای امیر بیگی نصراله آبادی به شماره ملی 0062973584 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:17"
+    },
+    {
+        "id": 65,
+        "company_name": "تجارت بين المللي آوات",
+        "reg_number": "635820",
+        "nat_id_display": "14013614723",
+        "national_id": "0452543185",
+        "position": "alternativeInspector",
+        "context": "آقای اردشیر بیگی نصراله آبادی به شماره ملی 0452543185 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:17"
+    },
+    {
+        "id": 66,
+        "company_name": "مهندسي هوشمند آينده مانا",
+        "reg_number": "90569",
+        "nat_id_display": "14013627471",
+        "national_id": "0920416829",
+        "position": "boardmember",
+        "context": "خانم مرجان لكزیان به شماره ملی 0920416829 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:19"
+    },
+    {
+        "id": 67,
+        "company_name": "مهندسي هوشمند آينده مانا",
+        "reg_number": "90569",
+        "nat_id_display": "14013627471",
+        "national_id": "0920451780",
+        "position": "chairman",
+        "context": "آقای مهدی بهنام وشانی به شماره ملی 0920451780 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:19"
+    },
+    {
+        "id": 68,
+        "company_name": "مهندسي هوشمند آينده مانا",
+        "reg_number": "90569",
+        "nat_id_display": "14013627471",
+        "national_id": "0923726403",
+        "position": "viceChairman",
+        "context": "خانم سیده الهه رضوانیان به شماره ملی 0923726403 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:19"
+    },
+    {
+        "id": 69,
+        "company_name": "مهندسي هوشمند آينده مانا",
+        "reg_number": "90569",
+        "nat_id_display": "14013627471",
+        "national_id": "0923241991",
+        "position": "mainInspector",
+        "context": "آقای فرید بشیان به شماره ملی 0923241991 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:19"
+    },
+    {
+        "id": 70,
+        "company_name": "مهندسي هوشمند آينده مانا",
+        "reg_number": "90569",
+        "nat_id_display": "14013627471",
+        "national_id": "0926581929",
+        "position": "alternativeInspector",
+        "context": "آقای محمد آگاهی به شماره ملی 0926581929 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:19"
+    },
+    {
+        "id": 71,
+        "company_name": "هيئت مذهبي محبين الحسين ع مقيم شميران",
+        "reg_number": "57866",
+        "nat_id_display": "14013593264",
+        "national_id": "0032263392",
+        "position": "boardmember",
+        "context": "آقای محمدمهدی كریم خانی به شماره ملی 0032263392 به سمت عضوهیئت امناء",
+        "extraction_date": "2025-05-03 12:14:20"
+    },
+    {
+        "id": 72,
+        "company_name": "هيئت مذهبي محبين الحسين ع مقيم شميران",
+        "reg_number": "57866",
+        "nat_id_display": "14013593264",
+        "national_id": "0067433367",
+        "position": "boardmember",
+        "context": "آقای سیدمهدی جوزی به شماره ملی 0067433367 به سمت عضوهیئت امناء",
+        "extraction_date": "2025-05-03 12:14:20"
+    },
+    {
+        "id": 73,
+        "company_name": "هيئت مذهبي محبين الحسين ع مقيم شميران",
+        "reg_number": "57866",
+        "nat_id_display": "14013593264",
+        "national_id": "0082568189",
+        "position": "boardmember",
+        "context": "آقای سعید رفیع به شماره ملی 0082568189 به سمت عضوهیئت امناء",
+        "extraction_date": "2025-05-03 12:14:20"
+    },
+    {
+        "id": 74,
+        "company_name": "هيئت مذهبي محبين الحسين ع مقيم شميران",
+        "reg_number": "57866",
+        "nat_id_display": "14013593264",
+        "national_id": "0410328588",
+        "position": "unknown",
+        "context": "آقای حامد زواره به شماره ملی 0410328588 به سمت روحانی به",
+        "extraction_date": "2025-05-03 12:14:20"
+    },
+    {
+        "id": 75,
+        "company_name": "هيئت مذهبي محبين الحسين ع مقيم شميران",
+        "reg_number": "57866",
+        "nat_id_display": "14013593264",
+        "national_id": "0440341477",
+        "position": "unknown",
+        "context": "آقای محمد قاسمی امام زاده به شماره ملی 0440341477 به سمت مربی قرآن",
+        "extraction_date": "2025-05-03 12:14:20"
+    },
+    {
+        "id": 76,
+        "company_name": "هيئت مذهبي محبين الحسين ع مقيم شميران",
+        "reg_number": "57866",
+        "nat_id_display": "14013593264",
+        "national_id": "0453306306",
+        "position": "boardmember",
+        "context": "آقای رضا قاسمی امام زاده به شماره ملی 0453306306 به سمت عضوهیئت امناء",
+        "extraction_date": "2025-05-03 12:14:20"
+    },
+    {
+        "id": 77,
+        "company_name": "هيئت مذهبي محبين الحسين ع مقيم شميران",
+        "reg_number": "57866",
+        "nat_id_display": "14013593264",
+        "national_id": "0453469590",
+        "position": "boardmember",
+        "context": "آقای حمیدرضا رشیدی به شماره ملی 0453469590 به سمت عضوهیئت امناء",
+        "extraction_date": "2025-05-03 12:14:20"
+    },
+    {
+        "id": 78,
+        "company_name": "هيئت مذهبي محبين الحسين ع مقيم شميران",
+        "reg_number": "57866",
+        "nat_id_display": "14013593264",
+        "national_id": "1728911702",
+        "position": "boardmember",
+        "context": "آقای نقی حاتمی به شماره ملی 1728911702 به سمت عضوهیئت امناء",
+        "extraction_date": "2025-05-03 12:14:20"
+    },
+    {
+        "id": 79,
+        "company_name": "ارغوان خدمات خاورميانه",
+        "reg_number": "12357",
+        "nat_id_display": "14013623600",
+        "national_id": "4220224807",
+        "position": "boardmember",
+        "context": "آقای مهران پیمان به شماره ملی 4220224807 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:22"
+    },
+    {
+        "id": 80,
+        "company_name": "ارغوان خدمات خاورميانه",
+        "reg_number": "12357",
+        "nat_id_display": "14013623600",
+        "national_id": "4220396136",
+        "position": "viceChairman",
+        "context": "خانم سیما پیمان به شماره ملی 4220396136 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:22"
+    },
+    {
+        "id": 81,
+        "company_name": "ارغوان خدمات خاورميانه",
+        "reg_number": "12357",
+        "nat_id_display": "14013623600",
+        "national_id": "4250140024",
+        "position": "chairman",
+        "context": "آقای عزیزاله پیمان به شماره ملی 4250140024 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:22"
+    },
+    {
+        "id": 82,
+        "company_name": "ارغوان خدمات خاورميانه",
+        "reg_number": "12357",
+        "nat_id_display": "14013623600",
+        "national_id": "2280668424",
+        "position": "alternativeInspector",
+        "context": "آقای شهرام هنرمندنیا به شماره ملی 2280668424 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:22"
+    },
+    {
+        "id": 83,
+        "company_name": "ارغوان خدمات خاورميانه",
+        "reg_number": "12357",
+        "nat_id_display": "14013623600",
+        "national_id": "4220119231",
+        "position": "mainInspector",
+        "context": "آقای ابراهیم تقوی به شماره ملی 4220119231 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:22"
+    },
+    {
+        "id": 84,
+        "company_name": "ايده تراز خاورميانه",
+        "reg_number": "12356",
+        "nat_id_display": "14013623575",
+        "national_id": "4220224807",
+        "position": "chairman",
+        "context": "آقای مهران پیمان به شماره ملی 4220224807 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:24"
+    },
+    {
+        "id": 85,
+        "company_name": "ايده تراز خاورميانه",
+        "reg_number": "12356",
+        "nat_id_display": "14013623575",
+        "national_id": "4232224939",
+        "position": "viceChairman",
+        "context": "آقای اسماعیل نمازیان به شماره ملی 4232224939 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:24"
+    },
+    {
+        "id": 86,
+        "company_name": "ايده تراز خاورميانه",
+        "reg_number": "12356",
+        "nat_id_display": "14013623575",
+        "national_id": "2280668424",
+        "position": "alternativeInspector",
+        "context": "آقای شهرام هنرمندنیا به شماره ملی 2280668424 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:24"
+    },
+    {
+        "id": 87,
+        "company_name": "ايده تراز خاورميانه",
+        "reg_number": "12356",
+        "nat_id_display": "14013623575",
+        "national_id": "4220119231",
+        "position": "mainInspector",
+        "context": "آقای ابراهیم تقوی به شماره ملی 4220119231 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:24"
+    },
+    {
+        "id": 88,
+        "company_name": "اوجان تجارت راستين",
+        "reg_number": "47680",
+        "nat_id_display": "14013611127",
+        "national_id": "0312544871",
+        "position": "chairman",
+        "context": "آقای سینا عینی قره اونه به شماره ملی 0312544871 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:30"
+    },
+    {
+        "id": 89,
+        "company_name": "اوجان تجارت راستين",
+        "reg_number": "47680",
+        "nat_id_display": "14013611127",
+        "national_id": "1718692242",
+        "position": "boardmember",
+        "context": "آقای امیر ارسلان عینی قره اونه به شماره ملی 1718692242 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:30"
+    },
+    {
+        "id": 90,
+        "company_name": "هونام پارسه البرز",
+        "reg_number": "9361",
+        "nat_id_display": "14013628016",
+        "national_id": "0150022077",
+        "position": "boardmember",
+        "context": "آقای مهدی صدوقی به شماره ملی 0150022077 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:31"
+    },
+    {
+        "id": 91,
+        "company_name": "هونام پارسه البرز",
+        "reg_number": "9361",
+        "nat_id_display": "14013628016",
+        "national_id": "2051299463",
+        "position": "ceo",
+        "context": "خانم یگانه بابازاده سرستی به شماره ملی 2051299463 به سمت مدیرعامل به",
+        "extraction_date": "2025-05-03 12:14:31"
+    },
+    {
+        "id": 92,
+        "company_name": "هونام پارسه البرز",
+        "reg_number": "9361",
+        "nat_id_display": "14013628016",
+        "national_id": "2130836021",
+        "position": "boardmember",
+        "context": "خانم نیكو منصوری به شماره ملی 2130836021 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:31"
+    },
+    {
+        "id": 93,
+        "company_name": "هونام پارسه البرز",
+        "reg_number": "9361",
+        "nat_id_display": "14013628016",
+        "national_id": "2140186761",
+        "position": "mainInspector",
+        "context": "آقای رحمت اله حسین زاده به شماره ملی 2140186761 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:31"
+    },
+    {
+        "id": 94,
+        "company_name": "هونام پارسه البرز",
+        "reg_number": "9361",
+        "nat_id_display": "14013628016",
+        "national_id": "2141271568",
+        "position": "alternativeInspector",
+        "context": "آقای احمد برجسته شاهكلا به شماره ملی 2141271568 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:31"
+    },
+    {
+        "id": 95,
+        "company_name": "افشار ابزار طلايه",
+        "reg_number": "3450",
+        "nat_id_display": "14013622589",
+        "national_id": "1900255091",
+        "position": "viceChairman",
+        "context": "خانم لادن طلاوری به شماره ملی 1900255091 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:32"
+    },
+    {
+        "id": 96,
+        "company_name": "افشار ابزار طلايه",
+        "reg_number": "3450",
+        "nat_id_display": "14013622589",
+        "national_id": "1900509059",
+        "position": "chairman",
+        "context": "خانم فاطمه طلاوری به شماره ملی 1900509059 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:32"
+    },
+    {
+        "id": 97,
+        "company_name": "افشار ابزار طلايه",
+        "reg_number": "3450",
+        "nat_id_display": "14013622589",
+        "national_id": "1910910775",
+        "position": "mainInspector",
+        "context": "آقای سیدجلال چرغندی به شماره ملی 1910910775 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:32"
+    },
+    {
+        "id": 98,
+        "company_name": "افشار ابزار طلايه",
+        "reg_number": "3450",
+        "nat_id_display": "14013622589",
+        "national_id": "1911110845",
+        "position": "alternativeInspector",
+        "context": "آقای سیداسماعیل موسوی مهدوی به شماره ملی 1911110845 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:32"
+    },
+    {
+        "id": 99,
+        "company_name": "كوه نگاران سهند",
+        "reg_number": "2542",
+        "nat_id_display": "14013626373",
+        "national_id": "1670831965",
+        "position": "chairman",
+        "context": "آقای خلیل عبدی به شماره ملی 1670831965 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:34"
+    },
+    {
+        "id": 100,
+        "company_name": "كوه نگاران سهند",
+        "reg_number": "2542",
+        "nat_id_display": "14013626373",
+        "national_id": "1671998839",
+        "position": "viceChairman",
+        "context": "خانم زینب محمودی جبدرق به شماره ملی 1671998839 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:34"
+    },
+    {
+        "id": 101,
+        "company_name": "كوه نگاران سهند",
+        "reg_number": "2542",
+        "nat_id_display": "14013626373",
+        "national_id": "6319820020",
+        "position": "ceo",
+        "context": "آقای علی گل كارا بدبوچال به شماره ملی 6319820020 به سمت مدیرعامل به",
+        "extraction_date": "2025-05-03 12:14:34"
+    },
+    {
+        "id": 102,
+        "company_name": "كوه نگاران سهند",
+        "reg_number": "2542",
+        "nat_id_display": "14013626373",
+        "national_id": "1452020231",
+        "position": "alternativeInspector",
+        "context": "آقای مهدی عابدی به شماره ملی 1452020231 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:34"
+    },
+    {
+        "id": 103,
+        "company_name": "كوه نگاران سهند",
+        "reg_number": "2542",
+        "nat_id_display": "14013626373",
+        "national_id": "1465789804",
+        "position": "mainInspector",
+        "context": "آقای عباس عابدی به شماره ملی 1465789804 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:34"
+    },
+    {
+        "id": 104,
+        "company_name": "آركان نصب صنعت",
+        "reg_number": "13242",
+        "nat_id_display": "14013569758",
+        "national_id": "4660262103",
+        "position": "chairman",
+        "context": "خانم نرگس تقی پور جاوی به شماره ملی 4660262103 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:35"
+    },
+    {
+        "id": 105,
+        "company_name": "آركان نصب صنعت",
+        "reg_number": "13242",
+        "nat_id_display": "14013569758",
+        "national_id": "4660333450",
+        "position": "viceChairman",
+        "context": "آقای محمدتقی تقی پور جاوی به شماره ملی 4660333450 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:35"
+    },
+    {
+        "id": 106,
+        "company_name": "آركان نصب صنعت",
+        "reg_number": "13242",
+        "nat_id_display": "14013569758",
+        "national_id": "4660482839",
+        "position": "ceo",
+        "context": "آقای دانیال تقی پورجاوی به شماره ملی 4660482839 به سمت مدیرعامل به",
+        "extraction_date": "2025-05-03 12:14:35"
+    },
+    {
+        "id": 107,
+        "company_name": "آركان نصب صنعت",
+        "reg_number": "13242",
+        "nat_id_display": "14013569758",
+        "national_id": "4660221415",
+        "position": "alternativeInspector",
+        "context": "آقای ابوالفضل عالی به شماره ملی 4660221415 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:35"
+    },
+    {
+        "id": 108,
+        "company_name": "آركان نصب صنعت",
+        "reg_number": "13242",
+        "nat_id_display": "14013569758",
+        "national_id": "4660505472",
+        "position": "mainInspector",
+        "context": "آقای محمود جهانی جوانمردی به شماره ملی 4660505472 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:35"
+    },
+    {
+        "id": 109,
+        "company_name": " بارمان اکسین رهام اروند",
+        "reg_number": "10073",
+        "nat_id_display": "14013610981",
+        "national_id": "4132113760",
+        "position": "mainInspector",
+        "context": "خانم فرح ناز پور حیدری به شماره ملی 4132113760 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:37"
+    },
+    {
+        "id": 110,
+        "company_name": " بارمان اکسین رهام اروند",
+        "reg_number": "10073",
+        "nat_id_display": "14013610981",
+        "national_id": "2580193286",
+        "position": "alternativeInspector",
+        "context": "خانم تینا گلزاریان نویر به شماره ملی 2580193286 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:37"
+    },
+    {
+        "id": 111,
+        "company_name": "آران تجارت وسپار",
+        "reg_number": "6501",
+        "nat_id_display": "14013608420",
+        "national_id": "1960535544",
+        "position": "chairman",
+        "context": "آقای سهند اكبری پور به شماره ملی 1960535544 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:39"
+    },
+    {
+        "id": 112,
+        "company_name": "آران تجارت وسپار",
+        "reg_number": "6501",
+        "nat_id_display": "14013608420",
+        "national_id": "1960587961",
+        "position": "viceChairman",
+        "context": "آقای وحید صفری آتوی به شماره ملی 1960587961 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:39"
+    },
+    {
+        "id": 113,
+        "company_name": "آران تجارت وسپار",
+        "reg_number": "6501",
+        "nat_id_display": "14013608420",
+        "national_id": "5559447366",
+        "position": "ceo",
+        "context": "آقای سام اكبری پور به شماره ملی 5559447366 به سمت مدیرعامل به",
+        "extraction_date": "2025-05-03 12:14:39"
+    },
+    {
+        "id": 114,
+        "company_name": "آران تجارت وسپار",
+        "reg_number": "6501",
+        "nat_id_display": "14013608420",
+        "national_id": "1960441590",
+        "position": "mainInspector",
+        "context": "خانم نیلوفر باوادی خواه به شماره ملی 1960441590 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:39"
+    },
+    {
+        "id": 115,
+        "company_name": "آران تجارت وسپار",
+        "reg_number": "6501",
+        "nat_id_display": "14013608420",
+        "national_id": "1960456660",
+        "position": "alternativeInspector",
+        "context": "آقای شایان موسوی خواجه به شماره ملی 1960456660 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:39"
+    },
+    {
+        "id": 116,
+        "company_name": "نگين مهتاب طلاييه پارس",
+        "reg_number": "90540",
+        "nat_id_display": "14013613002",
+        "national_id": "0829438211",
+        "position": "viceChairman",
+        "context": "آقای حامد روشنی به شماره ملی 0829438211 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:41"
+    },
+    {
+        "id": 117,
+        "company_name": "نگين مهتاب طلاييه پارس",
+        "reg_number": "90540",
+        "nat_id_display": "14013613002",
+        "national_id": "0921402333",
+        "position": "ceo",
+        "context": "آقای امید اصغرزاده به شماره ملی 0921402333 به سمت مدیرعامل به",
+        "extraction_date": "2025-05-03 12:14:41"
+    },
+    {
+        "id": 118,
+        "company_name": "نگين مهتاب طلاييه پارس",
+        "reg_number": "90540",
+        "nat_id_display": "14013613002",
+        "national_id": "0945454503",
+        "position": "chairman",
+        "context": "آقای سیدمحمد مشهدی حسینی به شماره ملی 0945454503 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:41"
+    },
+    {
+        "id": 119,
+        "company_name": "نگين مهتاب طلاييه پارس",
+        "reg_number": "90540",
+        "nat_id_display": "14013613002",
+        "national_id": "0938982397",
+        "position": "alternativeInspector",
+        "context": "آقای هاشم شاه محمدی به شماره ملی 0938982397 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:41"
+    },
+    {
+        "id": 120,
+        "company_name": "نگين مهتاب طلاييه پارس",
+        "reg_number": "90540",
+        "nat_id_display": "14013613002",
+        "national_id": "0939722615",
+        "position": "mainInspector",
+        "context": "خانم اكرم دهقان بنادكی به شماره ملی 0939722615 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:41"
+    },
+    {
+        "id": 121,
+        "company_name": "حامي فولاد نوين اسپادانا",
+        "reg_number": "77678",
+        "nat_id_display": "14013562464",
+        "national_id": "1111793689",
+        "position": "chairman",
+        "context": "خانم زهرا كریمی سودرجانی به شماره ملی 1111793689 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:42"
+    },
+    {
+        "id": 122,
+        "company_name": "حامي فولاد نوين اسپادانا",
+        "reg_number": "77678",
+        "nat_id_display": "14013562464",
+        "national_id": "1249958180",
+        "position": "ceo",
+        "context": "آقای مهران دادفر به شماره ملی 1249958180 به سمت مدیرعامل به",
+        "extraction_date": "2025-05-03 12:14:42"
+    },
+    {
+        "id": 123,
+        "company_name": "حامي فولاد نوين اسپادانا",
+        "reg_number": "77678",
+        "nat_id_display": "14013562464",
+        "national_id": "2296231871",
+        "position": "boardmember",
+        "context": "خانم آیدن صلواتیان به شماره ملی 2296231871 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:42"
+    },
+    {
+        "id": 124,
+        "company_name": "حامي فولاد نوين اسپادانا",
+        "reg_number": "77678",
+        "nat_id_display": "14013562464",
+        "national_id": "1272662721",
+        "position": "mainInspector",
+        "context": "خانم پگاه صادقی قوام آبادی به شماره ملی 1272662721 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:42"
+    },
+    {
+        "id": 125,
+        "company_name": "حامي فولاد نوين اسپادانا",
+        "reg_number": "77678",
+        "nat_id_display": "14013562464",
+        "national_id": "1289075441",
+        "position": "alternativeInspector",
+        "context": "آقای هادی آذری به شماره ملی 1289075441 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:42"
+    },
+    {
+        "id": 126,
+        "company_name": "درخشان ماندگار آراد",
+        "reg_number": "3446",
+        "nat_id_display": "14013594650",
+        "national_id": "4810132511",
+        "position": "chairman",
+        "context": "آقای عبداله اسدی اصل به شماره ملی 4810132511 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:44"
+    },
+    {
+        "id": 127,
+        "company_name": "درخشان ماندگار آراد",
+        "reg_number": "3446",
+        "nat_id_display": "14013594650",
+        "national_id": "4810196658",
+        "position": "ceo",
+        "context": "آقای حمداله اسدی اصل به شماره ملی 4810196658 به سمت مدیرعامل به",
+        "extraction_date": "2025-05-03 12:14:44"
+    },
+    {
+        "id": 128,
+        "company_name": "درخشان ماندگار آراد",
+        "reg_number": "3446",
+        "nat_id_display": "14013594650",
+        "national_id": "4810270947",
+        "position": "viceChairman",
+        "context": "خانم سمیرا اسكندری به شماره ملی 4810270947 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:44"
+    },
+    {
+        "id": 129,
+        "company_name": "درخشان ماندگار آراد",
+        "reg_number": "3446",
+        "nat_id_display": "14013594650",
+        "national_id": "1900207907",
+        "position": "mainInspector",
+        "context": "آقای اكبر رسائی فر به شماره ملی 1900207907 به سمت بازرس اصلی",
+        "extraction_date": "2025-05-03 12:14:44"
+    },
+    {
+        "id": 130,
+        "company_name": "درخشان ماندگار آراد",
+        "reg_number": "3446",
+        "nat_id_display": "14013594650",
+        "national_id": "1900456893",
+        "position": "alternativeInspector",
+        "context": "خانم فرشته برناد به شماره ملی 1900456893 به سمت بازرس علی",
+        "extraction_date": "2025-05-03 12:14:44"
+    },
+    {
+        "id": 131,
+        "company_name": "چاوش صنعت تابان",
+        "reg_number": "635606",
+        "nat_id_display": "14013599143",
+        "national_id": "0010866787",
+        "position": "boardmember",
+        "context": "آقای بابك آقازاده به شماره ملی 0010866787 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:49"
+    },
+    {
+        "id": 132,
+        "company_name": "چاوش صنعت تابان",
+        "reg_number": "635606",
+        "nat_id_display": "14013599143",
+        "national_id": "0013610546",
+        "position": "viceChairman",
+        "context": "آقای حسین بختیاری به شماره ملی 0013610546 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:49"
+    },
+    {
+        "id": 133,
+        "company_name": "چاوش صنعت تابان",
+        "reg_number": "635606",
+        "nat_id_display": "14013599143",
+        "national_id": "0310882230",
+        "position": "boardmember",
+        "context": "آقای علی سردشتی به شماره ملی 0310882230 به سمت عضو اصلی",
+        "extraction_date": "2025-05-03 12:14:49"
+    },
+    {
+        "id": 134,
+        "company_name": "سپندار تجارت زاگرس",
+        "reg_number": "77745",
+        "nat_id_display": "14013595893",
+        "national_id": "1271405849",
+        "position": "viceChairman",
+        "context": "خانم پریسا فروزنده به شماره ملی 1271405849 به سمت نایب رئیس",
+        "extraction_date": "2025-05-03 12:14:51"
+    },
+    {
+        "id": 135,
+        "company_name": "سپندار تجارت زاگرس",
+        "reg_number": "77745",
+        "nat_id_display": "14013595893",
+        "national_id": "1276407750",
+        "position": "chairman",
+        "context": "خانم فاطمه فروزنده به شماره ملی 1276407750 به سمت رئیس هیئت",
+        "extraction_date": "2025-05-03 12:14:51"
+    },
+    {
+        "id": 136,
+        "company_name": "سپندار تجارت زاگرس",
+        "reg_number": "77745",
+        "nat_id_display": "14013595893",
+        "national_id": "4622161036",
+        "position": "ceo",
+        "context": "آقای سینا قائید امینی به شماره ملی 4622161036 به سمت مدیرعامل به",
+        "extraction_date": "2025-05-03 12:14:51"
     }
 ]
