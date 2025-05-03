@@ -1912,9 +1912,11 @@ with tab2:
                                 color=[G.degree(node) for node in G.nodes()],
                                 colorbar=dict(
                                     thickness=15,
-                                    title='تعداد ارتباطات',
-                                    xanchor='left',
-                                    titleside='right'
+                                    title=dict(
+                                        text='تعداد ارتباطات',
+                                        side='right'
+                                    ),
+                                    xanchor='left'
                                 ),
                                 line_width=2))
                         
